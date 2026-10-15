@@ -1,0 +1,38 @@
+{
+  "name": "usage-heatmap",
+  "version": "0.1.0",
+  "description": "每日 token 用量格子图：像 GitHub 贡献图那样按日期画小方格，复刻 Claude 桌面版旧新建对话页上的那张图。",
+  "author": {
+    "name": "dantelin000"
+  },
+  "repository": "https://github.com/dantelin000/claude-mod-usage-heatmap",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "metric": {
+      "type": "string",
+      "title": "格子颜色按哪种 token 算",
+      "description": "new：新 token＝未缓存输入＋缓存写入＋输出（默认）；all：再加上缓存读取。缓存读取每天能到上亿，算进去会把色阶压扁，默认只放在悬停提示里。",
+      "default": "new",
+      "options": [
+        "new",
+        "all"
+      ]
+    },
+    "palette": {
+      "type": "string",
+      "title": "格子配色",
+      "description": "claude：Claude 的橙色（默认）；green：GitHub 的绿色。",
+      "default": "claude",
+      "options": [
+        "claude",
+        "green"
+      ]
+    },
+    "python": {
+      "type": "string",
+      "title": "Python 解释器",
+      "description": "汇总会话记录用的 python3 路径或命令名。",
+      "default": "python3"
+    }
+  }
+}
