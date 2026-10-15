@@ -1,0 +1,5 @@
+# Laid by Claude Code each time it loads the mod (the API's types for tsc).
+.claude-plugin/types/
+__pycache__/
+*.pyc
+.DS_Store
